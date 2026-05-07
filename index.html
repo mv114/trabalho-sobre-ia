@@ -6,33 +6,29 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="icon.png">
     <title>O futuro da IA, está em suas mãos</title>
+    <style>
+        body {
+            min-height: 150vh;
+        }
+
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: green;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #323683;
+            border-radius: 14px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            opacity: .95;
+        }
+    </style>
 </head>
-<style>
-    body{
-    min-height:150vh;
-    }
-
-    ::-webkit-scrollbar 
-    {
-        width: 12px;
-    }
-
-    ::-webkit-scrollbar-track 
-    {
-        background: green;
-    }
-
-    ::-webkit-scrollbar-thumb 
-    {
-        background: #323683;
-        border-radius: 14px;
-    }
-
-    ::-webkit-scrollbar-thumb:hover 
-    {
-        opacity: .95;
-    }
-  </style>
 <body>
     <div class="caixa-principal">
         <br>
@@ -62,28 +58,44 @@
                 <span class="tempo">Segundos</span>
             </div>
         </div>
-        <section>
-            <footer>
-                <a href="https://github.com/mv114" target="_blank" rel="noopener noreferrer">
-                    <img src="github.png"></img>
-                    <p>Github</p>
-                </a>
-                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
-                    <img src="youtube.png"></img>
-                    <p>Youtube</p>
-                    <a href="https://api.whatsapp.com/send?phone=5543999385851" target="_blank" rel="noopener noreferrer">
-                    <img src="Whatsapp.png"></img>
-                    <p>Whatsapp</p>
-                    </a>
-                    <a href="https://www.deepseek.com/">
-                        <img src="deepseek-color.png"></img>
-                        <p>Deepseek</p>
-                    </a>
-                </a>
-            </footer>
-        </section>
+        
+        <footer>
+            <a href="https://github.com/mv114" target="_blank" rel="noopener noreferrer">
+                <img src="github.png" alt="GitHub">
+                <p>Github</p>
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+                <img src="youtube.png" alt="YouTube">
+                <p>Youtube</p>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=5543999385851" target="_blank" rel="noopener noreferrer">
+                <img src="Whatsapp.png" alt="WhatsApp">
+                <p>Whatsapp</p>
+            </a>
+            <a href="https://www.deepseek.com/" target="_blank" rel="noopener noreferrer">
+                <img src="deepseek-color.png" alt="Deepseek">
+                <p>Deepseek</p>
+            </a>
+        </footer>
     </div>
     
+    <script src="script.js"></script>
+    <script>
+        // Função para atualizar o relógio
+        function atualizarRelogio() {
+            var agora = new Date();
+            var horas = agora.getHours().toString().padStart(2, '0');
+            var minutos = agora.getMinutes().toString().padStart(2, '0');
+            var segundos = agora.getSeconds().toString().padStart(2, '0');
+            
+            document.getElementById('horas').textContent = horas;
+            document.getElementById('minutos').textContent = minutos;
+            document.getElementById('segundos').textContent = segundos;
+        }
+        
+        // Atualizar relógio a cada segundo
+        setInterval(atualizarRelogio, 1000);
+        atualizarRelogio();
+    </script>
 </body>
-<script src="script.js"></script>
 </html>
